@@ -1,0 +1,21 @@
+ALGORITHM checkpoint
+VAR
+    ch:STRING
+    nbrv:INTEGER=0
+    nbrw,l:INTEGER=1
+BEGIN
+    Read(ch)
+    WHILE (ch[i]<>'.') DO
+        i:=i+1
+        l++
+    IF (ch[i]=' ') THEN
+        nbrw:=nbrw+1
+    END_IF
+    IF (ch[i]in ['a','A','e','E','o','O','u','U','y','Y','i','I']) THEN
+        nbrv:=nbrv+1
+    END_IF
+    END_WHILE
+Write("the number of word :",nbrw)
+Write("Number of vowels :" , nbrv)
+Write("Number of caracters :", l)
+END
